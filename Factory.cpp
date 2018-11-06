@@ -68,14 +68,6 @@ private:
     ~Factory() {}
 };
 
-// Here shows how to define outside
-//template<typename TBase, typename... Params>
-//Factory<TBase, Params...>* Factory<TBase, Params...>::GetInstance()
-//{
-//    static Factory<TBase, Params...> factory;
-//    return &factory;
-//}
-
 int main() {
 
     auto animal = Factory<Animal, std::string>::GetInstance()->Create<Dog>("Lucky");
